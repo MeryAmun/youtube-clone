@@ -5,11 +5,8 @@ import { ChannelDetails,Navbar,Feed,VideoDetails, SearchFeed  } from './componen
 
 
 
-const App = () => {
-     
-
-    return (
-        <Box xs={{backgroundColor: '#000'}}>
+const App = () => (
+        <Box sx={{backgroundColor: '#000'}}>
            <Navbar/>
             <Routes>
                 <Route path='/' exact element={<Feed/>}/>
@@ -19,5 +16,4 @@ const App = () => {
             </Routes>
         </Box>
     )
-}
 export default App
