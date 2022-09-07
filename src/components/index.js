@@ -5,7 +5,10 @@ import {default as VideoDetails} from "./VideoDetails";
 import{default as SearchFeed }from "./SearchFeed";
 import{default as SearchBar}from "./SearchBar";
 import{default as SideBar}from "./SideBar";
+import{default as Videos}from "./Videos";
+import{default as VideoCard}from "./VideoCard";
+import{default as ChannelCard}from "./ChannelCard";
 
 export {
-    Navbar,Feed,ChannelDetails,VideoDetails,SearchFeed,SearchBar,SideBar
+    Navbar,Feed,ChannelDetails,VideoDetails,SearchFeed,SearchBar,SideBar, Videos, VideoCard,ChannelCard
 }
