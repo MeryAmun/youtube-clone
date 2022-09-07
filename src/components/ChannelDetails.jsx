@@ -10,11 +10,18 @@ const ChannelDetails = () => {
   const { id }  = useParams();
 
   useEffect(() => {
-  fetchFromApi(`channels?part=snippet&id=${id}`)
-  .then((data) => setChannelDetail(data?.items[0]))
-  fetchFromApi(`search?channelId?=${id}&part=snippet&order=date`)
-  .then((data) => setVideos(data?.items))
-  }, [id])
+    const fetchResults = async () => {
+      const data = await fetchFromApi(`channels?part=snippet&id=${id}`);
+
+      setChannelDetail(data?.items[0]);
+
+      const videosData = await fetchFromApi(`search?channelId=${id}&part=snippet%2Cid&order=date`);
+
+      setVideos(videosData?.items);
+    };
+
+    fetchResults();
+  }, [id]);
   
   return (
     <Box minHeight='95vh'>

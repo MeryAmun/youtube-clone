@@ -8,7 +8,9 @@ import{default as SideBar}from "./SideBar";
 import{default as Videos}from "./Videos";
 import{default as VideoCard}from "./VideoCard";
 import{default as ChannelCard}from "./ChannelCard";
+import{default as Loader} from "./Loader";
 
 export {
-    Navbar,Feed,ChannelDetails,VideoDetails,SearchFeed,SearchBar,SideBar, Videos, VideoCard,ChannelCard
+    Navbar,Feed,ChannelDetails,VideoDetails,SearchFeed,SearchBar,
+    SideBar, Videos, VideoCard,ChannelCard,Loader
 }

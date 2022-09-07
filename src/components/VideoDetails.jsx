@@ -3,7 +3,7 @@ import {Link, useParams} from 'react-router-dom';
 import { Box, Stack,Typography } from '@mui/material';
 import ReactPlayer from 'react-player';
 import CheckCircle from '@mui/icons-material/CheckCircle';
-import {Videos} from './';
+import {Videos, Loader} from './';
 import { fetchFromApi } from '../utils/fetchFromApi';
 
 const VideoDetails = () => {
@@ -22,7 +22,7 @@ const VideoDetails = () => {
 
   }, [id]);
 
-  if(!videoDetail?.snippet) return 'Loading...'
+  if(!videoDetail?.snippet) return <Loader/>
 
   const { snippet:{title, channelId,channelTitle},statistics:{viewCount, likeCount} } = videoDetail;
   
